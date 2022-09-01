@@ -7,41 +7,41 @@
 # - 1 -> нет
 
 # 1 решение 
-# day = int(input("Введите день недели:"))                     
-# if day == 1:
-#     print(f"Он не является выходным днем.")
-# elif day == 2:
-#     print(f"Он не является выходным днем.")
-# elif day == 3:
-#     print(f"Он не является выходным днем.")
-# elif day == 4:
-#     print(f"Он не является выходным днем.")
-# elif day == 5:
-#     print(f"Он не является выходным днем.")
-# elif day == 6:
-#     print(f"Этот день Суббота, он является выходным днем.")
-# elif day == 7:
-#     print(f"Этот день Воскресенье, он является выходным днем.")
+day = int(input("Введите день недели:"))                     
+if day == 1:
+    print(f"Он не является выходным днем.")
+elif day == 2:
+    print(f"Он не является выходным днем.")
+elif day == 3:
+    print(f"Он не является выходным днем.")
+elif day == 4:
+    print(f"Он не является выходным днем.")
+elif day == 5:
+    print(f"Он не является выходным днем.")
+elif day == 6:
+    print(f"Этот день Суббота, он является выходным днем.")
+elif day == 7:
+    print(f"Этот день Воскресенье, он является выходным днем.")
 
 # 2 решение 
 
-# dayOfWeak = int(input("Введите день недели от 1 до 7:"))
-# if dayOfWeak in [1,2,3,4,5]:
-#     print("Будний день!")
-# else:
-#     print("Выходной день!")
+dayOfWeak = int(input("Введите день недели от 1 до 7:"))
+if dayOfWeak in [1,2,3,4,5]:
+    print("Будний день!")
+else:
+    print("Выходной день!")
 
 
 
 # Напишите программу для. проверки истинности утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
 
-# myArr = [[0,0,0],[0,0,1],[0,1,0],[0,1,1],[1,0,0],[1,0,1],[1,1,0],[1,1,1]]
-# counter = 0
-# for i in myArr :
-#     expr = (not(i[0] or i[1] or i[2])) == ((not i[0]) and (not i[1]) and (not i[2]))
-#     if expr == True:
-#         counter+=1
-# print(counter) 
+myArr = [[0,0,0],[0,0,1],[0,1,0],[0,1,1],[1,0,0],[1,0,1],[1,1,0],[1,1,1]]
+counter = 0
+for i in myArr :
+    expr = (not(i[0] or i[1] or i[2])) == ((not i[0]) and (not i[1]) and (not i[2]))
+    if expr == True:
+        counter+=1
+print(counter) 
 
 
 
@@ -53,26 +53,32 @@
 # - x=2; y=4-> 2
 # - x=-34; y=-30 -> 3
 
-# coordinate_x = int(input("Введите координату Х:"))
-# coordinate_y = int(input("Введите координату Y:"))
+coordinate_x = int(input("Введите координату Х:"))
+coordinate_y = int(input("Введите координату Y:"))
 
-# if coordinate_x > 0 and coordinate_y > 0:
-#     print("Это первая четверть")
-# if coordinate_x < 0 and coordinate_y > 0:
-#     print("Это вторая четверть")
-# if coordinate_x < 0 and coordinate_y < 0:
-#     print("Это третия четверть")
-# if coordinate_x > 0 and coordinate_y < 0:
-#     print("Это четвертая четверть")
+if coordinate_x > 0 and coordinate_y > 0:
+    print("Это первая четверть")
+if coordinate_x < 0 and coordinate_y > 0:
+    print("Это вторая четверть")
+if coordinate_x < 0 and coordinate_y < 0:
+    print("Это третия четверть")
+if coordinate_x > 0 and coordinate_y < 0:
+    print("Это четвертая четверть")
 
 
 
 
 # Напишите программу, которая по заданному номеру четверти, показывает диапазон возможных координат точек в этой четверти (x и y).
 
-
-
-
+quarter_num = int(input('Введите номер четверти от 1 до 4: '))
+if quarter_num == 1:
+    print('x > 0 and y > 0')
+if quarter_num == 2:
+    print('x < 0 and y > 0')
+if quarter_num == 3:
+    print('x < 0 and y < 0')
+if quarter_num == 4:
+    print('x > 0 and y < 0')
 
 
 
@@ -82,3 +88,9 @@
 
 # - A (3,6); B (2,1) -> 5,09
 # - A (7,-5); B (1,-1) -> 7,21
+
+import math
+coordinate_a = [3,6]
+coordinate_b = [2, 1]
+distance = math.sqrt( ((coordinate_a[0]-coordinate_b[0])**2)+((coordinate_a[1]-coordinate_b[1])**2) )
+print(distance)
